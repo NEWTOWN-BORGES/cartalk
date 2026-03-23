@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarTalk - Mensageiro Inteligente</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Notificação de Entrada -->
+      <div id="p2p-notif" class="notification">
+        <span class="label">Mensagem Próxima</span>
+        <h2 id="notif-title">Condutor solicita ultrapassagem</h2>
+        <div class="notif-actions">
+          <button id="btn-accept" class="btn btn-primary">ACEITAR</button>
+          <button id="btn-ignore" class="btn btn-secondary">IGNORAR</button>
+        </div>
+      </div>
+
+      <header class="header">
+        <div class="title-group">
+          <h1>CarTalk</h1>
+          <p id="ai-status" style="font-size: 0.75rem; color: var(--text-secondary);">IA: Inicializando...</p>
+        </div>
+        <div id="status-dot" class="status-dot" style="background: var(--warning); box-shadow: 0 0 10px var(--warning);"></div>
+      </header>
+
+      <main id="main-view" class="main-view">
+        <div class="card">
+          <span class="label">Bem-vindo</span>
+          <p class="message-text">Toque no microfone e diga "Quero ultrapassar" ou "Cuidado na frente".</p>
+        </div>
+      </main>
+
+      <section class="controls">
+        <button id="mic-btn" class="mic-btn" title="Falar">
+          <svg class="mic-icon" viewBox="0 0 24 24">
+            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+            <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+          </svg>
+        </button>
+      </section>
+
+      <div id="stt-preview" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary); height: 1.5rem;"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
